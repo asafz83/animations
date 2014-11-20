@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+	top: 100px;
+	left:100px;
+    width: 100px;
+    height: 100px;
+    background: red;
+	position: absolute;
+}
+
+.anim {
+	    -webkit-animation: asaf 2s; /* Chrome, Safari, Opera */
+		-webkit-animation-timing-function: linear;
+		
+
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes asaf {
+    
+	25%  {top:100px;left:500px;}
+    50%  {left: 500px;top: 500px;}
+    75%  {left: 100px;top: 500px;}
+    100% {left: 100px;top:100px;}
+}
+
+</style>
+<script>
+	function start(){
+		document.getElementById("a").className = "anim";
+	}
+	
+	function stop(){
+		document.getElementById("a").className = "";
+	}
+</script>
+</head>
+<body>
+<button onclick="start()">animate!</button>
+<button onclick="stop()">stop!</button>
+<div id="a"></div>
+
+</body>
+</html>
